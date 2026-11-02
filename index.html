@@ -144,6 +144,29 @@ tr.vrow td{color:var(--mut);font-size:12px}tr.vrow td:first-child{padding-left:4
 @media(max-width:600px){.vwrap{grid-template-columns:1fr}.vchart{height:300px}}
 @media(max-width:600px){.bfruit{width:72px;height:72px}.bfruit svg{width:58px;height:58px}}
 #reset{background:var(--spt,var(--acc))!important;border-color:var(--spt,var(--acc))!important}
+
+/* ===== Celular ===== */
+.fhint{display:none;font-size:11px;color:var(--mut);margin:4px 2px 0;text-align:right}
+@media (max-width:700px){
+ .wrap{padding:10px 10px 30px}
+ .head{padding:10px 12px;gap:10px;border-radius:12px}.head .logo{padding:5px 8px}.head .logo img{height:32px}.head h1{font-size:17px}
+ .filters{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:8px;padding:8px 10px;margin:0 -10px;border-radius:0;border-left:none;border-right:none;
+  scroll-snap-type:x proximity;scroll-padding-inline:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+ .filters::-webkit-scrollbar{display:none}
+ .filters>div{flex:0 0 148px;scroll-snap-align:start}.filters>.frs{flex-basis:190px}
+ .filters label{font-size:10.5px;margin-bottom:2px}
+ .filters select{padding:6px 7px;font-size:13px}
+ .filters #reset{flex:0 0 auto;white-space:nowrap;align-self:end;padding:7px 12px}
+ .fhint{display:block}
+ .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:10px -10px 0;padding:0 10px}.chips::-webkit-scrollbar{display:none}.chip{flex:none}
+ .banner{padding:12px;gap:12px}.bname{font-size:18px}
+ .kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 12px}.kpi .v{font-size:19px}.kic{width:30px;right:8px;opacity:.5}
+ .kpi:last-child{grid-column:1/-1}
+ .spcards{grid-template-columns:1fr 1fr;gap:8px}.spc .bars{height:170px}.cube{width:46px}.cube .tp{width:46px}
+ .card{padding:12px}
+ .upd summary{padding:8px 12px;gap:4px 10px}.updi{font-size:11px}
+ .tp-row{grid-template-columns:26px 1fr 92px;gap:8px;padding:6px 4px}.tp-val b{font-size:13px}
+}
 </style>
 </head>
 <body>
@@ -168,6 +191,7 @@ tr.vrow td{color:var(--mut);font-size:12px}tr.vrow td:first-child{padding-left:4
  <div class="frs"><label>Razón social</label><select id="fP"></select></div>
  <button id="reset">Limpiar filtros</button>
 </div>
+<div class="fhint">Desliza los filtros ⇆</div>
 <div class="chips" id="chips"></div>
 <div class="banner" id="banner"></div>
 <div class="kpis">
